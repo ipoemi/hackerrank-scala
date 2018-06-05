@@ -13,7 +13,8 @@ class SolutionSpec extends WordSpecLike with Matchers {
       Console.withOut(oStream) {
         Solution.bonappetit(1, Array(3, 10, 2, 9), 12)
       }
-      val expect = "5\r\n"
+
+      val expect = s"5${System.lineSeparator()}"
 
       oStream.toString shouldBe expect
     }
@@ -23,7 +24,7 @@ class SolutionSpec extends WordSpecLike with Matchers {
       Console.withOut(oStream) {
         Solution.bonappetit(1, Array(3, 10, 2, 9), 7)
       }
-      val expect = "Bon Appetit\r\n"
+      val expect = s"Bon Appetit${System.lineSeparator()}"
 
       oStream.toString shouldBe expect
     }
